@@ -15,16 +15,16 @@ if $latest_version == $current_version {
     git config --local user.email 'action@github.com'
     go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 
-    ['amd64' 'arm64'] | each { |arch| 
-        with-env {GOOS: "linux", GOARCH: $arch} {
+    ['amd64' 'arm64'] | each { |target_arch| 
+        with-env {GOOS: "linux", GOARCH: $target_arch} {
             (xcaddy build latest
                 --with github.com/caddy-dns/cloudflare
                 --with github.com/mholt/caddy-webdav
                 --with github.com/lindenlab/caddy-s3-proxy
                 --with github.com/caddyserver/forwardproxy@caddy2=github.com/sagernet/forwardproxy@latest
-                --output $'caddy_$(arch)')
+                --output $'caddy_$(target_arch)')
         }
-        git add $'caddy_$(arch)'
+        git add $'caddy_$(target_arch)'
     }
 
     git commit -am $latest_version
