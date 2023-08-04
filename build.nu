@@ -22,9 +22,9 @@ if $latest_version == $current_version {
                 --with github.com/mholt/caddy-webdav
                 --with github.com/lindenlab/caddy-s3-proxy
                 --with github.com/caddyserver/forwardproxy@caddy2=github.com/sagernet/forwardproxy@latest
-                --output $'caddy_$(target_arch)')
+                --output $'caddy_($target_arch)')
         }
-        git add $'caddy_$(target_arch)'
+        git add $'caddy_($target_arch)'
     }
 
     git commit -am $latest_version
