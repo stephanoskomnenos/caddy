@@ -9,7 +9,7 @@ caddy, build with:
 - [caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare)
 - [mholt/caddy-webdav](https://github.com/mholt/caddy-webdav)
 - [lindenlab/caddy-s3-proxy](https://github.com/lindenlab/caddy-s3-proxy)
-- [SagerNet/forwardproxy](https://github.com/SagerNet/forwardproxy)
+- [klzgrad/forwardproxy](https://github.com/klzgrad/forwardproxy)
 
 ## Download
 

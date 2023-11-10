@@ -21,7 +21,7 @@ if $latest_version == $current_version {
                 --with github.com/caddy-dns/cloudflare
                 --with github.com/mholt/caddy-webdav
                 --with github.com/lindenlab/caddy-s3-proxy
-                --with github.com/caddyserver/forwardproxy@caddy2=github.com/sagernet/forwardproxy@latest
+                --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive
                 --output $'caddy_($target_arch)')
         }
         git add $'caddy_($target_arch)'
