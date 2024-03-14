@@ -16,7 +16,7 @@ jobs:
       with:
         elvish-version: 0.20.1
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
     - name: Build & Push
