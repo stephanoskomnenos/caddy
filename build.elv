@@ -25,11 +25,14 @@ go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 for arch [amd64 arm64] {
     tmp E:GOOS = 'linux'
     tmp E:GOARCH = $arch
+    tmp E:CGO_ENABLED = '0'
     xcaddy build latest ^
         --with github.com/caddy-dns/cloudflare ^
         --with github.com/mholt/caddy-webdav ^
         --with github.com/lindenlab/caddy-s3-proxy ^
         --with github.com/caddyserver/forwardproxy@caddy2=github.com/klzgrad/forwardproxy@naive ^
+        --with github.com/caddyserver/replace-response ^
+        --with willnorris.com/go/imageproxy/caddy ^
         --output 'caddy_'$arch
     git add 'caddy_'$arch
 }

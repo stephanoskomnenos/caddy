@@ -10,6 +10,8 @@ caddy, build with:
 - [mholt/caddy-webdav](https://github.com/mholt/caddy-webdav)
 - [lindenlab/caddy-s3-proxy](https://github.com/lindenlab/caddy-s3-proxy)
 - [klzgrad/forwardproxy](https://github.com/klzgrad/forwardproxy)
+- [caddyserver/replace-response](https://github.com/caddyserver/replace-response)
+- [willnorris/imageproxy](https://github.com/willnorris/imageproxy)
 
 ## Download
 
